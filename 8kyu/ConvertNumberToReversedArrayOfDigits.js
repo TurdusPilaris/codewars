@@ -6,14 +6,16 @@
 // 0 => [0]
 
 function digitize(n) {
-    let stringN = String(n);
-    let arrayString = Array.from(stringN);
-    let resultArray = [];
+    // let stringN = String(n);
+    // let arrayString = Array.from(stringN);
+    // let resultArray = [];
+    //
+    // for(let i = arrayString.length; i > 0 ; i--){
+    //     resultArray.push(Number(arrayString[i-1]));
+    // }
+    // return resultArray;
 
-    for(let i = arrayString.length; i > 0 ; i--){
-        resultArray.push(Number(arrayString[i-1]));
-    }
-    return resultArray;
+    return Array.from(String(n), Number).reverse();
 }
 
 document.write(digitize(12345), '<br>');
