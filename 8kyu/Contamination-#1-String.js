@@ -15,13 +15,15 @@
 // Solution
 
 function contamination(text, char){
-    let result = "";
-    for (let i = 0; i < text.length; i++) {
-        // if (Boolean(char.trim())) {
-            result = result + char;
-        // }
-    }
-    return result;
+    // let result = "";
+    // for (let i = 0; i < text.length; i++) {
+    //     // if (Boolean(char.trim())) {
+    //         result = result + char;
+    //     // }
+    // }
+    // return result;
+
+    return char.repeat(text.length);
 }
 
 document.write(contamination("abc","z"), "<br>");
