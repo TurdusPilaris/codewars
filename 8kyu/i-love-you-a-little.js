@@ -14,7 +14,7 @@
 
 
 function howMuchILoveYou(nbPetals) {
-    arrayFlowers = [
+    phrase = [
         "I love you",
         "a little",
         "a lot",
@@ -22,18 +22,8 @@ function howMuchILoveYou(nbPetals) {
         "madly",
         "not at all"
     ]
-    let lengthArray = arrayFlowers.length;
 
-    let resultDel = (Math.floor(nbPetals/lengthArray));
-
-    if (resultDel<1) return arrayFlowers[nbPetals-1]
-
-    if (nbPetals === lengthArray*resultDel) {
-        return arrayFlowers[lengthArray-1];
-    } else
-    {
-        return arrayFlowers[nbPetals-lengthArray*resultDel-1];
-    }
+    return phrase[(nbPetals-1)%6]
 
 }
 
