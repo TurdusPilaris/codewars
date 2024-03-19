@@ -4,11 +4,8 @@
 
 
 function spacey(array) {
-    let x = ''
-    return array.map((element, index) =>{
-        x = x + element;
-         return x
-        })
+    let string = ''
+    return array.map((element) => string+= element)
 }
 
 
