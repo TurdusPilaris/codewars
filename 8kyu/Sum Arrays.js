@@ -20,9 +20,9 @@
 
 function sum(numbers) {
 
-    if (numbers.length === 0) return 0;
+     // if (numbers.length === 0) return 0;
 
-    return numbers.reduce((acc, el) => acc + el);
+    return numbers.reduce((acc, el) => acc + el, 0);
 
 }
 
