@@ -9,13 +9,13 @@
 // *** Remember 0 is evenly divisible by all integers but not the other way around **
 
 function divisibleByLast(n) {
-    let arr = [...n.toString()];
-    let arr2 = arr.map((e, index) => {
-        if(index===0) return false
-         return (+e)%+arr[index-1]===0
-    })
-    // TODO
-    return arr2
+    // let arr = [...n.toString()];
+    // let arr2 = arr.map((e, index) => {
+    //     if(index===0) return false
+    //      return (+e)%+arr[index-1]===0
+    // })
+    // return arr2
+    return [...n.toString()].map((el, index, arr) => el % arr[index-1]===0)
 }
 
 console.log(divisibleByLast(73312))//, [false, false, true, false, true], 'divisibleByLast(73312)')
