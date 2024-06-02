@@ -15,20 +15,16 @@
 
 function checkExam(array1, array2) {
     const sum = array1.reduce((acc, curr, index) => {
-        let result = 0;
-        if(array2[index ] === curr) {
-            result = 4
-        } else if (!array2[index ]){
-            result = 0;
-        } else result = -1
-         // return  acc +(array2[index ] === curr?4:-1);
-        return  acc +result;
-    }, 0 )
-    return sum < 0?0:sum;
+            if (array2[index] === curr) return acc+=4
+            else if (!array2[index]) return acc+=0
+            else return acc -1
+        },
+        0)
+    return sum < 0 ? 0 : sum;
     // good luck
 }
 
 console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]))//, 6);
-console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]))//, 7);
+console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""]))//, 7);
 console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]))//, 16);
-console.log(checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]))//, 0);
+console.log(checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]))//, 0);
