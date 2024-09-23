@@ -9,8 +9,11 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 function longest(s1, s2) {
-    let arr1 = s1.split('').concat(s2.split('')).sort();
-    return [...new Set(arr1)].join('');
+    // my solution
+    // let arr1 = s1.split('').concat(s2.split('')).sort();
+    // return [...new Set(arr1)].join('');
+    // best practice
+    return [...new Set(s1+s2)].join('');
 }
 
 console.log(longest("aretheyhere", "yestheyarehere"))//, "aehrsty")
