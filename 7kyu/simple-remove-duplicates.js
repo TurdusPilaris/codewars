@@ -13,17 +13,19 @@
 //     Good luck!
 
 //my solution
+// function solve(arr) {
+//     let set = new Set();
+//     for(let i = 0; i<arr.length; i++){
+//         if(set.has(arr[i])){
+//             set.delete(arr[i]);
+//         }
+//         set.add(arr[i]);
+//     }
+//     return Array.from(set);
+// }
 function solve(arr) {
-    let set = new Set();
-    for(let i = 0; i<arr.length; i++){
-        if(set.has(arr[i])){
-            set.delete(arr[i]);
-        }
-        set.add(arr[i]);
-    }
-    return Array.from(set);
+    return [...new Set(arr)].reverse();
 }
-
 console.log(solve([3,4,4,3,6,3])); //,[4,6,3])); //
 console.log(solve([1,2,1,2,1,2,3])); //,[1,2,3]);
 console.log(solve([1,2,3,4])); //,[1,2,3,4]);
