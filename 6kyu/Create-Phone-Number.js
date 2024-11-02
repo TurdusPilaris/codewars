@@ -8,18 +8,29 @@
 
 function createPhoneNumber(numbers){
 
-    return  numbers.reduce((acc, el, index)=>{
-        if(index===0){
-            return acc = "("+el.toString();
-        }
-        if(index===2){
-            return acc += +el.toString()+") ";
-        }
-        if(index===5){
-            return acc += +el.toString()+"-";
-        }
-        return acc += +el.toString();
-    },"");
+    //my solution
+    // return  numbers.reduce((acc, el, index)=>{
+    //     if(index===0){
+    //         return acc = "("+el.toString();
+    //     }
+    //     if(index===2){
+    //         return acc += +el.toString()+") ";
+    //     }
+    //     if(index===5){
+    //         return acc += +el.toString()+"-";
+    //     }
+    //     return acc += +el.toString();
+    // },"");
+
+    //best practic
+    var format = "(xxx) xxx-xxxx";
+
+    for(var i = 0; i < numbers.length; i++)
+    {
+        format = format.replace('x', numbers[i]);
+    }
+
+    return format;
 }
 
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); //, "(123) 456-7890");
