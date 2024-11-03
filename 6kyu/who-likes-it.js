@@ -21,7 +21,7 @@ function likes(names) {
     } else if(count===3){
         return `${names[0]}, ${names[1]} and ${names[2]} like this`
     } else if(count>3){
-        return `${names[0]}, ${names[1]} and 2 others like this`
+        return `${names[0]}, ${names[1]} and ${count-2} others like this`
     }
 
 
