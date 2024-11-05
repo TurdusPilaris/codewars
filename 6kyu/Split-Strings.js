@@ -15,6 +15,8 @@ function solution(str){
         arr.push(str[i]+str[i+1]);
     }
     return arr;
+
+   // return (s+"_").match(/.{2}/g)||[]
 }
 
 console.log(solution("abcdef"))// , ["ab", "cd", "ef"]);
