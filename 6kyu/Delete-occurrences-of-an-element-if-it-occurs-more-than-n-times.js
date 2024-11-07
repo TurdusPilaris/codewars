@@ -9,24 +9,33 @@
 
 //my solution
 function deleteNth(arr,n){
-    const resObject = {};
-    const resArr = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        let el = arr[i];
+    //my solution
+    // const resObject = {};
+    // const resArr = [];
+    //
+    // for (let i = 0; i < arr.length; i++) {
+    //     let el = arr[i];
+    //
+    //      if(resObject[el]){
+    //        resObject[el] += 1;
+    //     }else {
+    //         resObject[el] = 1;
+    //     }
+    //      if(resObject[el] <= n){
+    //          resArr.push(el);
+    //      }
+    // }
+    // return resArr;
 
-         if(resObject[el]){
-           resObject[el] += 1;
-        }else {
-            resObject[el] = 1;
-        }
-         if(resObject[el] <= n){
-             resArr.push(el);
-         }
-    }
-    return resArr;
+    //best practic
+    var cache = {};
+    return arr.filter(function(x) {
+        cache[x] = (cache[x]||0) + 1;
+        return cache[x] <= n;
+    });
 }
 
 console.log(deleteNth([20,37,20,21], 1))// , [20,37,21])
-console.log(deleteNth([1,1,3,3,7,2,2,2,2], 3))// , [1, 1, 3, 3, 7, 2, 2, 2])
-console.log(deleteNth([12,39,19,39,39,19,12], 1))// , [12, 39, 19])
+// console.log(deleteNth([1,1,3,3,7,2,2,2,2], 3))// , [1, 1, 3, 3, 7, 2, 2, 2])
+// console.log(deleteNth([12,39,19,39,39,19,12], 1))// , [12, 39, 19])
