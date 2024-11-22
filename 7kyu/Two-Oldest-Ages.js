@@ -9,9 +9,9 @@
 //     [1, 3, 10, 0]) --> [3, 10]
 
 // return the two oldest/oldest ages within the array of ages passed in.
-//my solition
+//best solition
 function twoOldestAges(ages){
-    return ages.sort((a, b)=> a-b).slice(ages.length-2);
+    return ages.sort((a, b)=> a-b).slice(-2);
 }
 
 console.log(twoOldestAges([1,5,87,45,8,8]));//[45, 87]
