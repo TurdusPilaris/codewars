@@ -8,7 +8,9 @@ function countBy(x, n) {
 
     // return [...Array(n)].map((_, i) => i)
     // return [ ...Array(n).keys() ].map( i => i+1);
-    return [ ...Array(n).keys() ].map( i => (i+1)*x);
+     return [ ...Array(n)].fill(0) ;
+
+    // return [ ...Array(n).keys() ].map( i => (i+1)*x);
 
 }
 
