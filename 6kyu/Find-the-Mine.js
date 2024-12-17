@@ -10,16 +10,13 @@
 // mineLocation( [ [0, 0, 0], [0, 0, 0], [0, 1, 0] ] ) => returns [2, 1]
 //
 function mineLocation(field){
-    const resArray = [];
     for (let i = 0; i < field.length; i++) {
         for (let j = 0; j < field[i].length; j++) {
             if(field[i][j]===1) {
-                resArray.push(i);
-                resArray.push(j);
+                return [i,j];
             }
         }
     }
-    return resArray;
 
 }
 
