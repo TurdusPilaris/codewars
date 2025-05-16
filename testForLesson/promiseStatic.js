@@ -46,17 +46,32 @@ setTimeout(() => {
 //     .then(data => console.log(data))
 //     .catch(error => console.error(error));
 
-Promise.any([getName('Vania'), getName('Olia'),  getName('Gena')])
-    .then(data => console.log(data))
-    .catch(error => console.error(error.errors));
+// Promise.any([getName('Vania'), getName('Olia'),  getName('Gena')])
+//     .then(data => console.log(data))
+//     .catch(error => console.error(error.errors));
+//
+// for (let i = 0; i < 7; i += 2) {
+//     console.log(i)
+//     console.log('Yo')
+// }
 
-for (let i = 0; i < 7; i += 2) {
-    console.log(i)
-    console.log('Yo')
-}
 
+//promise chain
+new Promise((resolve, reject) =>{
+    setTimeout(()=> {
+        resolve(10)
+    }, 1000)
+}).then((result)=>{
+    console.log(result);
+    return result + 5;
 
-
+}).then((result)=>{
+    console.log(result);
+    return result+6;
+}).then((result) => {
+    console.log(result)
+    return result +5
+})
 
 
 

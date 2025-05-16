@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "chai": "^5.1.2",
+    "mocha": "^11.0.1"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}
